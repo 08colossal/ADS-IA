@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #EBEBEB; /* Cor cinza claro da paleta */
+    color: #333;
+}
+
+/* Header & Nav */
+.navbar {
+    background-color: #011752; /* Azul escuro */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #FFC928; /* Amarelo */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo span {
+    color: #EBEBEB;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #EBEBEB;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFC928;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(1, 23, 82, 0.7), rgba(1, 23, 82, 0.7)), url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #EBEBEB;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn-main {
+    display: inline-block;
+    background-color: #24CE6B; /* Verde vibrante */
+    color: #011752;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+}
+
+/* Benefícios */
+.benefits {
+    background-color: #ADDABE; /* Verde menta */
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.benefit-item {
+    max-width: 400px;
+}
+
+.benefit-item .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #FFC928;
+}
+
+/* Produtos (Grid) */
+.products {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.products h2 {
+    color: #011752;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product-img {
+    background-color: #ddd;
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.btn-card {
+    background-color: #011752;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.price {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #24CE6B;
+}
+
+footer {
+    background-color: #011752;
+    color: #EBEBEB;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
