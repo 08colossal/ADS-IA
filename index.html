@@ -3,74 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroDrones Pro - Tecnologia para o Campo</title>
+    <title>AgroDrones Pro | Tecnologia de Elite</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">AGRODRONES <span>PRO</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#modelos">Modelos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#treinamento">Treinamento</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">AGRO<span>DRONES</span></div>
+            <nav class="nav-detailed">
+                <ul>
+                    <li><a href="#modelos">Modelos <span>FROTA 2026</span></a></li>
+                    <li><a href="#servicos">Serviços <span>MAPEAMENTO</span></a></li>
+                    <li><a href="#treinamento">Treinamento <span>CERTIFICAÇÃO</span></a></li>
+                    <li><a href="#depoimentos">Depoimentos <span>CASES</span></a></li>
+                </ul>
+            </nav>
+            <a href="#contato" class="nav-cta">CONTATO DIRETO</a>
+        </div>
     </header>
 
     <section class="hero">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-drone-flying-over-a-large-green-field-34531-large.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
         <div class="hero-content">
-            <h1>POTÊNCIA E PRECISÃO PARA O CAMPO</h1>
-            <p>A revolução agrícola com drones de alta capacidade e monitoramento em tempo real.</p>
-            <a href="#modelos" class="btn-main">CONHEÇA NOSSOS MODELOS</a>
-        </div>
-    </section>
-
-    <section class="benefits">
-        <div class="benefit-item">
-            <div class="icon">💰</div>
-            <h3>ECONOMIA & EFICIÊNCIA</h3>
-            <p>Reduza custos operacionais com aplicação inteligente de insumos. Poupe tempo e recursos.</p>
-        </div>
-        <div class="benefit-item">
-            <div class="icon">🎯</div>
-            <h3>AGRICULTURA DE PRECISÃO</h3>
-            <p>Mapeamento detalhado e aplicação localizada geram lavouras mais produtivas.</p>
-        </div>
-    </section>
-
-    <section id="modelos" class="products">
-        <h2>NOSSOS DRONES MAIS POTENTES</h2>
-        <div class="product-grid">
-            <div class="card">
-                <div class="product-img"></div>
-                <h4>AGRO-TITAN 50L</h4>
-                <p>Tanque de 50L, 30 min. de vôo</p>
-                <span class="price">Sob Consulta</span>
-                <button class="btn-card">SAIBA MAIS</button>
-            </div>
-            <div class="card">
-                <div class="product-img"></div>
-                <h4>AGRO-SCOUT XL</h4>
-                <p>Sensores multiespectrais, 45 min. de vôo</p>
-                <span class="price">Sob Consulta</span>
-                <button class="btn-card">SAIBA MAIS</button>
-            </div>
-            <div class="card">
-                <div class="product-img"></div>
-                <h4>AGRO-SPRAY 30L</h4>
-                <p>Design compacto, 25 min. de vôo</p>
-                <span class="price">Sob Consulta</span>
-                <button class="btn-card">SAIBA MAIS</button>
+            <h1>POTÊNCIA QUE <span>TRANSFORMA</span></h1>
+            <p>O topo da tecnologia em pulverização e análise de solo com estética cyber-industrial.</p>
+            <div class="hero-btns">
+                <a href="#modelos" class="btn-cyber">EXPLORAR FROTA</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 AgroDrones Pro - Todos os direitos reservados.</p>
+    <section class="cyber-section">
+        <div class="container">
+            <h2 class="section-title">VANTAGENS OPERACIONAIS</h2>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚙️</div>
+                    <h3>ECONOMIA & EFICIÊNCIA</h3>
+                    <p>Redução drástica de desperdício com aplicação precisa de insumos em tempo real.</p>
+                    <div class="card-line"></div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛰️</div>
+                    <h3>PRECISÃO MILITAR</h3>
+                    <p>Sensores multiespectrais de última geração para mapeamento detalhado da lavoura.</p>
+                    <div class="card-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modelos" class="drones-showcase">
+        <div class="container">
+            <h2 class="section-title">OS MAIS POTENTES</h2>
+            <div class="product-grid">
+                <div class="drone-card">
+                    <div class="drone-img"></div>
+                    <h4>AGRO-TITAN 50L</h4>
+                    <p>Tanque de 50L | 30 min. vôo</p>
+                    <span class="price">SOB CONSULTA</span>
+                    <button class="btn-buy">ESPECIFICAÇÕES</button>
+                </div>
+                <div class="drone-card">
+                    <div class="drone-img"></div>
+                    <h4>AGRO-SCOUT XL</h4>
+                    <p>Sensor Térmico | 45 min. vôo</p>
+                    <span class="price">SOB CONSULTA</span>
+                    <button class="btn-buy">ESPECIFICAÇÕES</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-cyber">
+        <p>&copy; 2026 AGRODRONES PRO - Liderança em Tecnologia Agrícola.</p>
     </footer>
 
 </body>
