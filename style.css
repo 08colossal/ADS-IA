@@ -1,244 +1,150 @@
-/* Variáveis da Paleta e Estética Cyber Avançada */
-:root {
-    --navy: #011752;
-    --grey: #EBEBEB;
-    --mint: #ADDABE;
-    --green: #24CE6B;
-    --yellow: #FFC928;
-    --glass: rgba(1, 23, 82, 0.85);
-    /* Novo Degradê Cyber/Metálico de Múltiplas Etapas */
-    --cyber-metallic: linear-gradient(135deg, #001a33 0%, #0a1f44 40%, #001219 80%, #000000 100%);
-    --metallic-border: rgba(255, 255, 255, 0.1);
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
 }
 
-* {
-    margin: 0; padding: 0; box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+:root {
+    --bg-dark: #0a0a0c;
+    --cyber-neon: #24CE6B; /* Verde Tech */
+    --cyber-blue: #011752;
+    --text-light: #EBEBEB;
 }
 
 body {
-    background-color: var(--grey);
-    color: #fff;
-    scroll-behavior: smooth;
-    position: relative;
+    background: 
+        radial-gradient(
+        circle, 
+        rgb(0,0,0) 50%, 
+        var(--cyber-blue) 85%
+    );
+    color: var(--text-light);
     overflow-x: hidden;
 }
 
-/* Pseudo-elemento para Textura de Fundo de Circuitos */
-body::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    /* Padrão geométrico sutil com degradê para simular circuitos */
-    background-image: linear-gradient(0deg, rgba(255,255,255,.05) 1px, transparent 1px), 
-                      linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.1;
-    z-index: -1;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header Glassmorphism (Já está ótimo, mas adicionei mais detalhes) */
-.main-header {
-    position: fixed;
+/* Header & Nav */
+.cyber-header {
     width: 100%;
+    padding: 20px 5%;
+    background: rgba(10, 10, 12, 0.5);
+    border-bottom:none;
+    position: fixed;
+    top: 0;
     z-index: 1000;
-    background: var(--glass);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--metallic-border);
-    padding: 15px 0;
-    transition: 0.3s;
 }
 
-.main-header .container {
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo { font-weight: 900; font-size: 1.5rem; color: #fff; }
-.logo span { color: var(--green); }
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
 
-.nav-detailed ul { display: flex; list-style: none; }
-.nav-detailed a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0 15px;
+.logo span { color: var(--cyber-neon); }
+
+.nav-menu {
     display: flex;
-    flex-direction: column;
-    font-size: 0.85rem;
-    transition: 0.3s;
+    list-style: none;
+    gap: 25px;
 }
 
-.nav-detailed a span {
-    font-size: 0.6rem;
-    color: var(--mint);
-    font-weight: bold;
-}
-
-.nav-detailed a:hover { color: var(--yellow); }
-
-.nav-cta {
-    background: var(--green);
-    color: var(--navy);
-    padding: 10px 20px;
-    border-radius: 4px;
+.nav-menu a {
     text-decoration: none;
-    font-weight: bold;
-    font-size: 0.75rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+    backdrop-filter: blur(12px);
 }
 
-/* Hero Section (Já está muito bom) */
+.nav-menu a:hover {
+    color: var(--cyber-neon);
+    text-shadow: 0 0 10px var(--cyber-neon);
+}
+
+/* Hero Section */
 .hero {
-    position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
+    /*background: linear-gradient(45deg, #0a0a0c 25%, #111116 100%);*/
+    background-color: none;
 }
 
-.bg-video {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%; min-height: 100%;
-    z-index: -1;
-    object-fit: cover;
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--cyber-blue);
 }
 
-.overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(1, 23, 82, 0.4), #000);
-    z-index: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero-content h1 { font-size: 4.5rem; font-weight: 900; line-height: 1; margin-bottom: 20px; }
-.hero-content h1 span { color: var(--green); text-shadow: 0 0 20px rgba(36, 206, 107, 0.5); }
-
-.btn-cyber {
-    background: transparent;
-    border: 2px solid var(--green);
-    color: var(--green);
-    padding: 15px 40px;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-.btn-cyber:hover {
-    background: var(--green);
-    color: var(--navy);
-    box-shadow: 0 0 30px var(--green);
-}
-
-/* SEÇÃO CYBER/METÁLICA (Onde a mágica acontece) */
-.cyber-section {
-    padding: 120px 0;
-    background: #000;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 80px;
-    font-size: 2.8rem;
-    color: var(--grey);
-}
-
+/* Benefícios Card */
 .benefit-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.benefit-card {
-    /* Novo Degradê Cyber/Metálico Profundo */
-    background: var(--cyber-metallic);
-    padding: 60px;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-    transition: 0.4s;
-    /* Sombra Profunda de Múltiplas Etapas (Interna e Externa) */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(10, 31, 68, 0.5);
-    /* Borda Sutil com Brilho Neon */
-    border: 1px solid rgba(173, 218, 190, 0.4);
-    backdrop-filter: blur(15px);
-}
-
-.benefit-card:hover {
-    border-color: var(--green);
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(36, 206, 107, 0.3), inset 0 0 20px rgba(10, 31, 68, 0.6);
-}
-
-.benefit-icon { font-size: 3.5rem; margin-bottom: 25px; }
-.benefit-card h3 { color: var(--yellow); margin-bottom: 18px; letter-spacing: 1px; font-weight: bold; }
-.benefit-card p { color: var(--mint); line-height: 1.6; font-size: 1.1rem; }
-
-/* Vitrine de Produtos (Já está boa) */
-.drones-showcase {
-    background: var(--grey);
-    padding: 120px 0;
-    color: var(--navy);
-}
-
-.product-grid {
     display: flex;
     justify-content: center;
     gap: 40px;
+    padding: 100px 5%;
 }
 
-.drone-card {
-    background: #fff;
+.benefit-card {
+    border: 1px solid #333;
     padding: 40px;
-    border-radius: 15px;
-    width: 380px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    width: 400px;
+    transition: 0.4s;
+    position: relative;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 30%);
+    background-color:black;
 }
 
-.drone-img {
-    height: 220px;
-    background: #f0f0f0;
-    margin-bottom: 25px;
-    border-radius: 12px;
+.benefit-card:hover {
+    border-color: var(--cyber-neon);
+    transform: translateY(-10px);
+    background: rgba(0, 255, 157, 0.05);
 }
 
-.price { color: var(--green); font-weight: 900; display: block; margin: 18px 0; font-size: 1.2rem;}
+/* Drone Showcase (Os 6 containers lado a lado) */
+.drone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 50px 5%;
+}
 
-.btn-buy {
-    background: var(--navy);
-    color: #fff;
-    border: none;
-    width: 100%;
-    padding: 14px;
-    border-radius: 6px;
-    cursor: pointer;
+.drone-item {
+    height: 300px;
+    background: #16161a;
+    border-left: 4px solid var(--cyber-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
-    font-size: 1rem;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
-footer {
-    background: #000;
+.drone-item:hover {
+    background: var(--cyber-blue);
+    color: #000;
+}
+
+/* Animação Simples */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.section-title h2 {
     text-align: center;
-    padding: 60px;
-    color: var(--mint);
-    font-size: 0.85rem;
-    border-top: 1px solid var(--metallic-border);
+    letter-spacing: 5px;
+    animation: pulse 2s infinite;
 }
