@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte Técnico | AgroDrones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="header-container">
+            <div class="logo">AGRO<span>DRONES</span></div>
+            <nav>
+                <a href="index.html" class="btn-back">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    Voltar ao Início
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="support-card">
+            <header class="card-header">
+                <h2>Abertura de Chamado</h2>
+                <p>Relate problemas técnicos ou solicite manutenção da sua frota.</p>
+            </header>
+
+            <form class="support-form">
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Propriedade / Cliente</label>
+                        <input type="text" placeholder="Nome da Fazenda ou Razão Social" required>
+                    </div>
+                    <div class="field-group">
+                        <label>E-mail Corporativo</label>
+                        <input type="email" placeholder="contato@empresa.com.br" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field-group span-2">
+                        <label>Equipamento</label>
+                        <select>
+                            <option>DJI Agras T40</option>
+                            <option>DJI Agras T20P</option>
+                            <option>Mavic 3 Multispectral</option>
+                        </select>
+                    </div>
+                    <div class="field-group span-2">
+                        <label>Número de Série (S/N)</label>
+                        <input type="text" placeholder="Ex: 1581F..." required>
+                    </div>
+                    <div class="field-group span-2">
+                        <label>Prioridade</label>
+                        <select class="select-priority">
+                            <option value="normal">Normal (Dúvida)</option>
+                            <option value="alta">Alta (Drone Parado)</option>
+                            <option value="urgente">Crítica (Safra em Curso)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field-group full">
+                    <label>Descrição Detalhada do Incidente</label>
+                    <textarea rows="5" placeholder="Descreva os sintomas, códigos de erro ou peças necessárias para o reparo..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Protocolar Chamado Técnico</button>
+            </form>
+
+            <footer class="card-footer">
+                <span>Atendimento Seg-Sex: 07h às 19h</span>
+                <span>Emergência: <strong>0800 700 900</strong></span>
+            </footer>
+        </section>
+    </main>
+
+    <a href="https://wa.me/seu-numero" class="whatsapp-btn" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-2.203 0-4.391 1.203-4.391 4.391 0 1.547.797 2.859 2.016 3.594l-.359 1.359 1.391-.359c.406.141.844.219 1.297.219 2.203 0 4.391-1.203 4.391-4.391s-2.188-4.813-4.344-4.813zm7.953 4.391c0 4.109-3.422 7.422-7.641 7.422-1.219 0-2.359-.281-3.375-.781l-3.344.875.891-3.234c-.656-1.016-1.031-2.219-1.031-3.5 0-4.109 3.422-7.422 7.641-7.422s7.859 3.313 7.859 7.422z"/></svg>
+    </a>
+
+</body>
+</html>

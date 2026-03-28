@@ -1,0 +1,2 @@
+#Home (Giovana):
+"Trabalhe como um Desenvolvedor de Softwares com 10 anos de experiência. Crie um site usando apenas HTML e CSS. O tema é: venda de drones para agronegócio. Preciso da página inicial, onde você mostra os drones mais potentes e os principais benefícios (economia e precisão). Além de um menu para interligar com: Modelos, Serviços, Treinamento, Depoimentos e contato. As cores e imagens serão adicionadas depois. Adicione animações e uma estética meio cyber. Adicione Blur no menu."
