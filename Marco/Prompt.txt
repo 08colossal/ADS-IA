@@ -1,0 +1,1 @@
+Crie o design e o código  fazendo um arquivo HTML e outro CSS de uma aba de suporte com um formulário para contato, uma opção de whatsapp e um cabeçario para voltar ao início para um e-commerce de drones agrícolas. A interface deve ser profissional, limpa e transmitir confiança tecnológica. Utilize uma paleta de cores #011752 #EBEBEB #ADDABE #24CE6B #FFC928.
