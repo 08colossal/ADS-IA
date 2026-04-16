@@ -48,7 +48,8 @@ body {
     letter-spacing: 2px;
 }
 
-.logo span { color: var(--cyber-neon); }
+.logo span { color: var(--neon-green);
+ }
 
 .nav-menu {
     display: flex;
