@@ -41,7 +41,8 @@ color: var(--azul);
     letter-spacing: 2px;
 }
 
-.logo span { color: var(--verde); }
+.logo span { color: var(--verde); 
+}
 
 /* HERO */
 .hero {
