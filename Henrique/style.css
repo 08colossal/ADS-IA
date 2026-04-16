@@ -18,25 +18,30 @@ background: var(--cinza);
 color: var(--azul);
 }
 
-/* NAVBAR */
-.navbar {
-background: var(--azul);
-color: white;
-display: flex;
-justify-content: space-between;
-padding: 20px 40px;
+/* Header & Nav */
+.cyber-header {
+    width: 100%;
+    padding: 20px 5%;
+    background: rgba(10, 10, 12, 0.5);
+    border-bottom:none;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar ul {
-display: flex;
-gap: 20px;
-list-style: none;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar a {
-color: white;
-text-decoration: none;
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
+
+.logo span { color: var(--cyber-neon); }
 
 /* HERO */
 .hero {
