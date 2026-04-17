@@ -1,32 +1,35 @@
 :root {
---azul: #011752;
---cinza: #EBEBEB;
---verde-claro: #ADDABE;
---verde: #24CE6B;
---amarelo: #FFC928;
+    --bg-dark: #0a0a0c;
+    --cyber-neon: #24CE6B; /* Verde Tech */
+    --cyber-blue: #011752;
+    --text-light: #EBEBEB;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  }
-
-body {
-background: var(--cinza);
-color: var(--azul);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Header & Nav */
+body {
+    background: radial-gradient(circle, rgb(0,0,0) 50%, var(--cyber-blue) 85%);
+    color: var(--text-light);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Header & Nav (Igual à primeira) */
 .cyber-header {
     width: 100%;
     padding: 20px 5%;
-    background: rgba(10, 10, 12, 0.5);
-    border-bottom:none;
+    background: rgba(10, 10, 12, 0.8);
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid rgba(36, 206, 107, 0.2);
 }
 
 .nav-container {
@@ -40,9 +43,7 @@ color: var(--azul);
     font-weight: 900;
     letter-spacing: 2px;
 }
-
-.logo span { color: var(--verde); 
-}
+.logo span { color: var(--cyber-neon); }
 
 .nav-menu {
     display: flex;
@@ -56,7 +57,6 @@ color: var(--azul);
     font-size: 0.9rem;
     text-transform: uppercase;
     transition: 0.3s;
-    backdrop-filter: blur(12px);
 }
 
 .nav-menu a:hover {
@@ -64,85 +64,114 @@ color: var(--azul);
     text-shadow: 0 0 10px var(--cyber-neon);
 }
 
-
-/* HERO */
+/* Hero Section Ajustada */
 .hero {
-text-align: center;
-padding: 70px 20px;
-background: linear-gradient(135deg, var(--verde), var(--verde-claro));
+    text-align: center;
+    padding: 150px 20px 60px; /* Mais padding no topo por causa do header fixo */
+    background: transparent;
 }
 
 .hero h2 {
-font-size: 32px;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    animation: pulse 2s infinite;
 }
 
-/* CONTAINER */
+/* Grid de Drones / Cards */
 .container {
-padding: 40px;
+    padding: 40px 5%;
 }
 
-/* GRID */
 .grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
-/* CARD */
+/* Card Estilo Cyberpunk */
 .card {
-background: white;
-border-radius: 15px;
-padding: 15px;
-box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-transition: 0.3s;
+    background: #16161a;
+    border-left: 4px solid var(--cyber-blue);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+    border-radius: 0; /* Cards tech geralmente são mais quadrados ou angulares */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
 }
 
 .card:hover {
-transform: translateY(-10px);
+    border-left-color: var(--cyber-neon);
+    transform: translateY(-10px);
+    background: rgba(36, 206, 107, 0.05);
+    box-shadow: 0 0 20px rgba(36, 206, 107, 0.2);
 }
 
-/* IMAGEM */
 .card img {
-width: 100%;
-height: 180px;
-object-fit: cover;
-border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.5s;
+    filter: grayscale(30%);
 }
 
-/* TEXTO */
+.card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Tags e Textos */
 .card h2 {
-margin: 10px 0;
+    margin: 15px 0;
+    font-size: 1.4rem;
+    color: var(--text-light);
 }
 
 .tag {
-background: var(--verde-claro);
-padding: 5px 10px;
-border-radius: 6px;
-font-size: 12px;
+    background: rgba(36, 206, 107, 0.2);
+    color: var(--cyber-neon);
+    padding: 5px 12px;
+    border: 1px solid var(--cyber-neon);
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-/* BOTÃO */
+/* Botão Neon */
 .card button {
-width: 100%;
-margin-top: 10px;
-padding: 10px;
-background: var(--verde);
-border: none;
-color: white;
-border-radius: 6px;
-cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--cyber-neon);
+    color: var(--cyber-neon);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .card button:hover {
-background: var(--amarelo);
-color: var(--azul);
+    background: var(--cyber-neon);
+    color: #000;
+    box-shadow: 0 0 15px var(--cyber-neon);
 }
 
-/* FOOTER */
+/* Footer */
 .footer {
-background: var(--azul);
-color: white;
-text-align: center;
-padding: 20px;
-margin-top: 30px;
+    background: rgba(10, 10, 12, 0.9);
+    color: var(--text-light);
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid var(--cyber-blue);
+    margin-top: 50px;
+}
+
+/* Animação que você já tinha */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
 }
