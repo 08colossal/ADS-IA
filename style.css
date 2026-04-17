@@ -72,7 +72,7 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,97 @@ body {
     max-width: 600px;
     margin: 0 auto;
 }
+/* --- ESTILO DA SEÇÃO DE HISTÓRIA (DENTRO DA HERO) --- */
+.history-section {
+    margin-top: 40px; /* Espaço abaixo do subtítulo do Hero */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Alinhamento à esquerda para parecer um log de sistema */
+    animation: fadeIn 1.5s ease-in-out;
+}
 
+.history-section .glass-card {
+    background: rgba(1, 23, 82, 0.3); /* Azul da home com transparência */
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--neon); /* Detalhe lateral verde */
+    padding: 30px;
+    position: relative;
+    /* Corte tech no canto inferior direito */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 95% 100%, 0 100%);
+}
+
+.status-tag {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--neon);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.blink {
+    height: 8px;
+    width: 8px;
+    background: var(--neon);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    animation: blinker 1s linear infinite;
+}
+
+.history-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.history-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(224, 230, 237, 0.8); /* Branco levemente fosco */
+    margin-bottom: 20px;
+}
+
+/* Linha de Mini-Status/Estatísticas */
+.stats-row {
+    display: flex;
+    gap: 30px;
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat strong {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon);
+    font-size: 1.2rem;
+}
+
+.stat small {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
 /* Benefícios Card */
 .benefit-grid {
     display: flex;
