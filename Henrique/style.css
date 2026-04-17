@@ -3,6 +3,7 @@
     --cyber-neon: #24CE6B; /* Verde Tech */
     --cyber-blue: #011752;
     --text-light: #EBEBEB;
+    --border-glass: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -20,7 +21,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header & Nav (Igual à primeira) */
+/* --- HEADER & NAV --- */
 .cyber-header {
     width: 100%;
     padding: 20px 5%;
@@ -64,10 +65,10 @@ body {
     text-shadow: 0 0 10px var(--cyber-neon);
 }
 
-/* Hero Section Ajustada */
+/* --- HERO & HISTORY SECTION --- */
 .hero {
     text-align: center;
-    padding: 150px 20px 60px; /* Mais padding no topo por causa do header fixo */
+    padding: 150px 20px 40px;
     background: transparent;
 }
 
@@ -76,45 +77,79 @@ body {
     letter-spacing: 4px;
     color: var(--text-light);
     text-transform: uppercase;
-    animation: pulse 2s infinite;
+    margin-bottom: 30px;
 }
 
-/* Grid de Drones / Cards */
+.history-section {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: left;
+}
+
+.glass-card {
+    background: rgba(1, 23, 82, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass);
+    border-left: 4px solid var(--cyber-neon);
+    padding: 30px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+}
+
+.status-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--cyber-neon);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.blink {
+    height: 8px; width: 8px;
+    background: var(--cyber-neon);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    animation: blinker 1s linear infinite;
+}
+
+/* --- GRID DE MODELOS (2 colunas x 3 linhas) --- */
 .container {
-    padding: 40px 5%;
+    padding: 20px 5% 80px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    /* Força 2 colunas */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
 }
 
 /* Card Estilo Cyberpunk */
 .card {
     background: #16161a;
     border-left: 4px solid var(--cyber-blue);
-    padding: 20px;
+    padding: 25px;
     position: relative;
     overflow: hidden;
     transition: 0.4s;
-    border-radius: 0; /* Cards tech geralmente são mais quadrados ou angulares */
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 92% 100%, 0 100%);
 }
 
 .card:hover {
     border-left-color: var(--cyber-neon);
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     background: rgba(36, 206, 107, 0.05);
     box-shadow: 0 0 20px rgba(36, 206, 107, 0.2);
 }
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
-    transition: 0.5s;
     filter: grayscale(30%);
+    transition: 0.5s;
 }
 
 .card:hover img {
@@ -122,28 +157,18 @@ body {
     transform: scale(1.05);
 }
 
-/* Tags e Textos */
 .card h2 {
-    margin: 15px 0;
-    font-size: 1.4rem;
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
     color: var(--text-light);
-}
-
-.tag {
-    background: rgba(36, 206, 107, 0.2);
-    color: var(--cyber-neon);
-    padding: 5px 12px;
-    border: 1px solid var(--cyber-neon);
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 /* Botão Neon */
 .card button {
     width: 100%;
-    margin-top: 15px;
-    padding: 12px;
+    margin-top: 20px;
+    padding: 14px;
     background: transparent;
     border: 1px solid var(--cyber-neon);
     color: var(--cyber-neon);
@@ -151,6 +176,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    letter-spacing: 1px;
 }
 
 .card button:hover {
@@ -159,19 +185,20 @@ body {
     box-shadow: 0 0 15px var(--cyber-neon);
 }
 
-/* Footer */
+/* --- FOOTER --- */
 .footer {
     background: rgba(10, 10, 12, 0.9);
     color: var(--text-light);
     text-align: center;
     padding: 40px;
     border-top: 1px solid var(--cyber-blue);
-    margin-top: 50px;
 }
 
-/* Animação que você já tinha */
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
+/* --- ANIMAÇÕES --- */
+@keyframes blinker { 50% { opacity: 0; } }
+
+/* Responsividade: No celular vira 1 coluna */
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero h2 { font-size: 2rem; }
 }
