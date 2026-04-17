@@ -119,6 +119,10 @@ body {
     padding: 50px 5%;
 }
 
+.drone-grid img{
+    width: 100%;
+    height: auto;
+}
 .drone-item {
     height: 300px;
     background: #16161a;
