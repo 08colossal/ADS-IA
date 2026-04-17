@@ -119,10 +119,14 @@ body {
     padding: 50px 5%;
 }
 
-.drone-grid img{
+.drone-grid img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Ou a altura que preferir */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem esticar, cortando as bordas se necessário */
+    display: block; /* Remove espaços vazios estranhos abaixo da imagem */
+    border-radius: 8px; /* Opcional: só pra deixar bonitinho */
 }
+
 .drone-item {
     height: 300px;
     background: #16161a;
