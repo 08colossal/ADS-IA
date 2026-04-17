@@ -157,7 +157,7 @@ body {
 
 /* Efeito quando passa o mouse */
 .drone-item:hover span {
-    background: rgba(0, 243, 255, 0.7); /* O azul do seu tema */
+    background: rgb(36, 206, 107, 0.8); /* O azul do seu tema */
     color: #000;
 }
 
