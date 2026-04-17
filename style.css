@@ -15,6 +15,9 @@
 }
 
 body {
+    :-webkit-scrollbar {
+    display: none;
+    }
     background: 
         radial-gradient(
         circle, 
